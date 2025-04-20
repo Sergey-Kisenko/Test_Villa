@@ -4,6 +4,7 @@ using MagicVilla_VillaApi.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.JsonPatch;
+using MagicVilla_VillaApi.CustomLogs;
 
 namespace MagicVilla_VillaApi.Controllers
 {
@@ -12,11 +13,19 @@ namespace MagicVilla_VillaApi.Controllers
     [Route("api/VillaApi")]
     public class VillaApiController : ControllerBase
     {
-        private readonly ILogger<VillaApiController> _logger;
-        public VillaApiController(ILogger<VillaApiController> logger)
+        //private readonly ILogger<VillaApiController> _logger;
+        //public VillaApiController(ILogger<VillaApiController> logger)
+        //{
+        //    _logger = logger;
+        //}
+
+
+        public readonly IMyLogs _logger;
+        public VillaApiController (IMyLogs logs)
         {
-            _logger = logger;
+            _logger = logs;
         }
+
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -33,17 +42,20 @@ namespace MagicVilla_VillaApi.Controllers
         {
             if (id == 0)
             {
-                _logger.LogInformation("Id 0");
+                //_logger.LogInformation("Id 0");
+                _logger.Logs($"id{id}");
                 return BadRequest();
             }
 
             var obj = VillaStore.DBVillaStore.FirstOrDefault(x => x.Id == id);
             if (obj == null)
             {
-                _logger.LogInformation("Villa not found");
+                //_logger.LogInformation("Villa not found");
+                _logger.Logs("Villa not found");
                 return NotFound();
             }
-            _logger.LogInformation("Ok");
+            //_logger.LogInformation("Ok");
+            _logger.Logs("Pk");
 
             return Ok(obj);
         }
