@@ -30,8 +30,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "villa",
-        "Type": "MagicVilla_VillaApi.Model.DTO.VillaDTO",
+        "Name": "dto_create",
+        "Type": "MagicVilla_VillaApi.Model.DTO.VillaDTOCreate",
         "IsRequired": true
       }
     ],
@@ -67,44 +67,6 @@
   },
   {
     "ContainingType": "MagicVilla_VillaApi.Controllers.VillaApiController",
-    "Method": "DeleteVilla",
-    "RelativePath": "api/VillaApi",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 204
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "StatusCode": 400
-      },
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 500
-      }
-    ]
-  },
-  {
-    "ContainingType": "MagicVilla_VillaApi.Controllers.VillaApiController",
     "Method": "PutVilla",
     "RelativePath": "api/VillaApi",
     "HttpMethod": "PUT",
@@ -118,7 +80,7 @@
       },
       {
         "Name": "villa",
-        "Type": "MagicVilla_VillaApi.Model.DTO.VillaDTO",
+        "Type": "MagicVilla_VillaApi.Model.DTO.VillaDTOUpdate",
         "IsRequired": true
       }
     ],
@@ -194,6 +156,44 @@
   },
   {
     "ContainingType": "MagicVilla_VillaApi.Controllers.VillaApiController",
+    "Method": "DeleteVilla",
+    "RelativePath": "api/VillaApi/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
+      },
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_VillaApi.Controllers.VillaApiController",
     "Method": "UpdatePartialVilla",
     "RelativePath": "api/VillaApi/{id}",
     "HttpMethod": "PATCH",
@@ -202,7 +202,7 @@
     "Parameters": [
       {
         "Name": "id",
-        "Type": "System.Int32",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "IsRequired": true
       },
       {
