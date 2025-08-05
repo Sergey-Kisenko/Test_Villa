@@ -7,22 +7,23 @@ using Microsoft.AspNetCore.JsonPatch;
 using MagicVilla_VillaApi.CustomLogs;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using MagicVilla_VillaApi.Repository.Interfaces;
 
 namespace MagicVilla_VillaApi.Controllers
 {
     [ApiController]
-    //[Route("api/[controller]")]
     [Route("api/VillaApi")]
     public class VillaApiController : ControllerBase
     {
         private readonly ILogger<VillaApiController> _logger;
-        readonly ApplicationDBContext _context;
         readonly IMapper _mapper;
-        public VillaApiController(ILogger<VillaApiController> logger, ApplicationDBContext context, IMapper mapper)
+        private readonly IRepository<Villa> _repository;
+
+        public VillaApiController(ILogger<VillaApiController> logger, ApplicationDBContext context, IMapper mapper, IRepository<Villa> repository)
         {
             _mapper = mapper;
             _logger = logger;
-            _context = context;
+            _repository = repository;
         }
 
 
@@ -30,7 +31,7 @@ namespace MagicVilla_VillaApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<VillaDTO>>> GetVillas()
         {
-            IEnumerable<Villa> villas = await _context.Villas.ToListAsync();
+            IEnumerable<Villa> villas = await _repository.GetAll();
             return Ok(_mapper.Map<IEnumerable<VillaDTO>>(villas));
         }
 
@@ -46,7 +47,7 @@ namespace MagicVilla_VillaApi.Controllers
                 return BadRequest();
             }
 
-            var obj = await _context.Villas.FirstOrDefaultAsync(x => x.Id == id);
+            var obj = await _repository.Get(id);
             if (obj == null)
             {
                 _logger.LogInformation("Villa not found");
@@ -68,12 +69,11 @@ namespace MagicVilla_VillaApi.Controllers
                 return StatusCode(StatusCodes.Status400BadRequest);
             }
 
-            Villa model = _mapper.Map<Villa>(dto_create);
-            await _context.AddAsync(model);
-            await _context.SaveChangesAsync();
+            Villa new_villa = _mapper.Map<Villa>(dto_create);
+            _repository.Create(new_villa);
 
             // вызвавать маршрут - показать виллу и данные созданной виллы
-            return CreatedAtRoute("GetVilla", new { model.Id }, model);
+            return CreatedAtRoute("GetVilla", new { new_villa.Id }, new_villa);
         }
 
         [HttpDelete("{id:int}")]
@@ -86,13 +86,13 @@ namespace MagicVilla_VillaApi.Controllers
             {
                 return BadRequest();
             }
-            var obj = await _context.Villas.FirstOrDefaultAsync(x => x.Id == id);
+            var obj = await _repository.Get(id);
             if (obj == null)
             {
                 return NotFound();
             }
-            _context.Villas.Remove(obj);
-            await _context.SaveChangesAsync();
+            
+            _repository.Delete(obj);
 
             return NoContent();
         }
@@ -106,10 +106,10 @@ namespace MagicVilla_VillaApi.Controllers
             {
                 return BadRequest();
             }
-            var obj = await _context.Villas.FirstOrDefaultAsync(x => x.Id == id);
-            obj = _mapper.Map<Villa>(villa);
 
-            await _context.SaveChangesAsync();
+            _repository.Update(_mapper.Map<Villa>(villa));
+            //var obj = _repository.Get(id);
+            //obj = _mapper.Map<Villa>(villa);
 
             return NoContent();
         }
@@ -117,17 +117,14 @@ namespace MagicVilla_VillaApi.Controllers
         [HttpPatch("{id:int}", Name ="UpdatePartialVilla")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdatePartialVilla(int? id, JsonPatchDocument<VillaDTO> patchDto)
+        public async Task<IActionResult> UpdatePartialVilla(int id, JsonPatchDocument<VillaDTO> patchDto)
         {
-            if(id ==0 || id == null)
+            if(id == 0)
             {
                 return BadRequest();
             }
 
-            // или использовать отвязку трекинга, менять сущость и делать апдейт
-            //var villa = _context.Villas.AsNoTracking().FirstOrDefault(u => u.Id == id);
-
-            var villa = _context.Villas.FirstOrDefault(u => u.Id == id);
+            var villa = _repository.Get(id);
             if(villa == null)
             {
                 return BadRequest();
@@ -141,9 +138,9 @@ namespace MagicVilla_VillaApi.Controllers
                 return BadRequest(ModelState);
             }
 
-            villa = _mapper.Map<Villa>(modelDTO);
+            //villa = _mapper.Map<Villa>(modelDTO);
 
-            await _context.SaveChangesAsync();
+            //await _context.SaveChangesAsync();
 
             return NoContent();
         }

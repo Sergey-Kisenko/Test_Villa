@@ -7,8 +7,12 @@
       "RelativeMoniker": "D:0:0:{4A548DF0-B02D-4E08-91F3-669973DD2B06}|MagicVilla_VillaApi\\MagicVilla_VillaApi.csproj|solutionrelative:magicvilla_villaapi\\controllers\\villaapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A548DF0-B02D-4E08-91F3-669973DD2B06}|MagicVilla_VillaApi\\MagicVilla_VillaApi.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvilla_villaapi\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A548DF0-B02D-4E08-91F3-669973DD2B06}|MagicVilla_VillaApi\\MagicVilla_VillaApi.csproj|solutionrelative:magicvilla_villaapi\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A548DF0-B02D-4E08-91F3-669973DD2B06}|MagicVilla_VillaApi\\MagicVilla_VillaApi.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvilla_villaapi\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A548DF0-B02D-4E08-91F3-669973DD2B06}|MagicVilla_VillaApi\\MagicVilla_VillaApi.csproj|solutionrelative:magicvilla_villaapi\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A548DF0-B02D-4E08-91F3-669973DD2B06}|MagicVilla_VillaApi\\MagicVilla_VillaApi.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvilla_villaapi\\repository\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A548DF0-B02D-4E08-91F3-669973DD2B06}|MagicVilla_VillaApi\\MagicVilla_VillaApi.csproj|solutionrelative:magicvilla_villaapi\\repository\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A548DF0-B02D-4E08-91F3-669973DD2B06}|MagicVilla_VillaApi\\MagicVilla_VillaApi.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvilla_villaapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -32,10 +36,36 @@
               "RelativeDocumentMoniker": "MagicVilla_VillaApi\\Controllers\\VillaApiController.cs",
               "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\Controllers\\VillaApiController.cs",
               "RelativeToolTip": "MagicVilla_VillaApi\\Controllers\\VillaApiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAUwHAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-16T10:01:10.261Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\Repository\\Interfaces\\IRepository.cs",
+              "RelativeDocumentMoniker": "MagicVilla_VillaApi\\Repository\\Interfaces\\IRepository.cs",
+              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\Repository\\Interfaces\\IRepository.cs",
+              "RelativeToolTip": "MagicVilla_VillaApi\\Repository\\Interfaces\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T20:02:33.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\Repository\\Repository.cs",
+              "RelativeDocumentMoniker": "MagicVilla_VillaApi\\Repository\\Repository.cs",
+              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\Repository\\Repository.cs",
+              "RelativeToolTip": "MagicVilla_VillaApi\\Repository\\Repository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T19:42:58.31Z",
               "EditorCaption": ""
             },
             {
@@ -44,27 +74,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MappingConfig.cs",
-              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\MappingConfig.cs",
-              "RelativeDocumentMoniker": "MagicVilla_VillaApi\\MappingConfig.cs",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\MappingConfig.cs",
-              "RelativeToolTip": "MagicVilla_VillaApi\\MappingConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T17:25:26.709Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\Program.cs",
               "RelativeDocumentMoniker": "MagicVilla_VillaApi\\Program.cs",
               "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\Program.cs",
               "RelativeToolTip": "MagicVilla_VillaApi\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-27T16:22:54.399Z"
+              "WhenOpened": "2025-04-27T16:22:54.399Z",
+              "EditorCaption": ""
             }
           ]
         }
