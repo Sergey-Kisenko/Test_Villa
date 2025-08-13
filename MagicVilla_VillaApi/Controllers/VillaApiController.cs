@@ -17,9 +17,9 @@ namespace MagicVilla_VillaApi.Controllers
     {
         private readonly ILogger<VillaApiController> _logger;
         readonly IMapper _mapper;
-        private readonly IRepository<Villa> _repository;
+        private readonly IVillaRepository _repository;
 
-        public VillaApiController(ILogger<VillaApiController> logger, ApplicationDBContext context, IMapper mapper, IRepository<Villa> repository)
+        public VillaApiController(ILogger<VillaApiController> logger, ApplicationDBContext context, IMapper mapper, IVillaRepository repository)
         {
             _mapper = mapper;
             _logger = logger;
@@ -47,7 +47,7 @@ namespace MagicVilla_VillaApi.Controllers
                 return BadRequest();
             }
 
-            var obj = await _repository.Get(id);
+            var obj = await _repository.Get(x=>x.Id==id);
             if (obj == null)
             {
                 _logger.LogInformation("Villa not found");
@@ -70,7 +70,7 @@ namespace MagicVilla_VillaApi.Controllers
             }
 
             Villa new_villa = _mapper.Map<Villa>(dto_create);
-            _repository.Create(new_villa);
+            await _repository.Create(new_villa);
 
             // вызвавать маршрут - показать виллу и данные созданной виллы
             return CreatedAtRoute("GetVilla", new { new_villa.Id }, new_villa);
@@ -86,13 +86,13 @@ namespace MagicVilla_VillaApi.Controllers
             {
                 return BadRequest();
             }
-            var obj = await _repository.Get(id);
+            var obj = await _repository.Get(x => x.Id == id);
             if (obj == null)
             {
                 return NotFound();
             }
             
-            _repository.Delete(obj);
+            await _repository.Delete(obj);
 
             return NoContent();
         }
@@ -107,9 +107,7 @@ namespace MagicVilla_VillaApi.Controllers
                 return BadRequest();
             }
 
-            _repository.Update(_mapper.Map<Villa>(villa));
-            //var obj = _repository.Get(id);
-            //obj = _mapper.Map<Villa>(villa);
+            await _repository.Update(_mapper.Map<Villa>(villa));
 
             return NoContent();
         }
@@ -124,23 +122,18 @@ namespace MagicVilla_VillaApi.Controllers
                 return BadRequest();
             }
 
-            var villa = _repository.Get(id);
+            var villa = await _repository.Get(x => x.Id == id);
             if(villa == null)
             {
-                return BadRequest();
+                return NotFound();
             }
             VillaDTO modelDTO = _mapper.Map<VillaDTO>(villa);
-
             patchDto.ApplyTo(modelDTO, ModelState);
 
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            _mapper.Map(modelDTO, villa);
+            await _repository.Save();
 
-            //villa = _mapper.Map<Villa>(modelDTO);
 
-            //await _context.SaveChangesAsync();
 
             return NoContent();
         }
