@@ -9,7 +9,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[MagicVilla_VillaApi.Model.DTO.VillaDTO, MagicVilla_VillaApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "MagicVilla_VillaApi.Model.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -37,7 +37,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MagicVilla_VillaApi.Model.DTO.VillaDTO",
+        "Type": "MagicVilla_VillaApi.Model.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -119,7 +119,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "MagicVilla_VillaApi.Model.DTO.VillaDTO",
+        "Type": "MagicVilla_VillaApi.Model.ApiResponse",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -230,5 +230,84 @@
       }
     ],
     "EndpointName": "UpdatePartialVilla"
+  },
+  {
+    "ContainingType": "MagicVilla_VillaApi.Controllers.VillaNumberController",
+    "Method": "GetAll",
+    "RelativePath": "api/VillaNumber",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaApi.Model.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_VillaApi.Controllers.VillaNumberController",
+    "Method": "CreateVillaNumber",
+    "RelativePath": "api/VillaNumber",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numberDTOCreate",
+        "Type": "MagicVilla_VillaApi.Model.DTO.VillaNumberDTOCreate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaApi.Model.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_VillaApi.Controllers.VillaNumberController",
+    "Method": "Get",
+    "RelativePath": "api/VillaNumber/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaApi.Model.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetNumberVilla"
   }
 ]
