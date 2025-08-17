@@ -12,17 +12,14 @@ namespace MagicVilla_VillaApi.Controllers
     public class VillaNumberController : Controller
     {
         readonly IMapper _mapper;
-        private IRepository<VillaNumber> _context;
+        private readonly IVillaNumberRepository _context;
         private ApiResponse _response;
 
-
-        public VillaNumberController(IMapper _mapper, IRepository<VillaNumber> _context)
+        public VillaNumberController(IMapper _mapper, IVillaNumberRepository _context)
         {
             this._mapper = _mapper;
             this._context = _context;
             _response = new ApiResponse();
-
-
         }
 
         [HttpGet]
@@ -108,6 +105,31 @@ namespace MagicVilla_VillaApi.Controllers
             }
         }
 
+        [HttpPut]
+        public async Task<ActionResult<ApiResponse>> UpdateVillaNumber(int id, [FromBody] VillaNumberDTOUpdate dTOUpdate )
+        {
+            try
+            {
+                if (dTOUpdate==null)
+                {
+                    _response.isSuccess = false;
+                    return BadRequest(_response);
+                }
+                _context.Update(_mapper.Map<VillaNumber>(dTOUpdate));
+                
+                _response.Result = dTOUpdate;
+                _response.HttpStatusCode = HttpStatusCode.OK;
+                return Ok(_response);
+
+            }
+            catch (Exception ex)
+            {
+                _response.ErrorMessege = new List<string> { ex.Message };
+                _response.isSuccess = false;
+                _response.HttpStatusCode = HttpStatusCode.BadRequest;
+                return BadRequest(_response);
+            }
+        }
         
     }
 }
