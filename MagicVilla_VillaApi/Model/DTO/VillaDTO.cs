@@ -12,6 +12,6 @@ namespace MagicVilla_VillaApi.Model.DTO
         public int Occupancy { get; set; }
         public string ImageUrl { get; set; }
         public string Amenity { get; set; }
-       
+        public List<VillaNumberDTO> villaNumberDTOs { get; set; }
     }
 }
