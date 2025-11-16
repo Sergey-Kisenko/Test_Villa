@@ -3,32 +3,12 @@
   "WorkspaceRootPath": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvillaweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|solutionrelative:magicvillaweb\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvillaweb\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|solutionrelative:magicvillaweb\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvillaweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|solutionrelative:magicvillaweb\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvillaweb\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|solutionrelative:magicvillaweb\\mappingconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvillaweb\\models\\apirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|solutionrelative:magicvillaweb\\models\\apirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvillaweb\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|solutionrelative:magicvillaweb\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvillaweb\\models\\dto\\villadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|solutionrelative:magicvillaweb\\models\\dto\\villadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{898B3C52-33B0-4A9B-AB90-268E6C22A39F}|MagicVillaUtility\\MagicVillaUtility.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvillautility\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{898B3C52-33B0-4A9B-AB90-268E6C22A39F}|MagicVillaUtility\\MagicVillaUtility.csproj|solutionrelative:magicvillautility\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|e:\\c# project\\2025\\udemi\\api_course1\\magicvilla\\magicvillaweb\\services\\interfaces\\ibaseservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B0851409-B6D7-4467-A280-B594C6A3B93F}|MagicVillaWeb\\MagicVillaWeb.csproj|solutionrelative:magicvillaweb\\services\\interfaces\\ibaseservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,101 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\appsettings.json",
-              "RelativeDocumentMoniker": "MagicVillaWeb\\appsettings.json",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\appsettings.json",
-              "RelativeToolTip": "MagicVillaWeb\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-24T17:04:35.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Program.cs",
-              "RelativeDocumentMoniker": "MagicVillaWeb\\Program.cs",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Program.cs",
-              "RelativeToolTip": "MagicVillaWeb\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T17:01:23.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MappingConfig.cs",
-              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\MappingConfig.cs",
-              "RelativeDocumentMoniker": "MagicVillaWeb\\MappingConfig.cs",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\MappingConfig.cs",
-              "RelativeToolTip": "MagicVillaWeb\\MappingConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T16:58:46.206Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApiResponse.cs",
-              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Models\\ApiResponse.cs",
-              "RelativeDocumentMoniker": "MagicVillaWeb\\Models\\ApiResponse.cs",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Models\\ApiResponse.cs",
-              "RelativeToolTip": "MagicVillaWeb\\Models\\ApiResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T16:42:39.739Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VillaDTO.cs",
-              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Models\\DTO\\VillaDTO.cs",
-              "RelativeDocumentMoniker": "MagicVillaWeb\\Models\\DTO\\VillaDTO.cs",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Models\\DTO\\VillaDTO.cs",
-              "RelativeToolTip": "MagicVillaWeb\\Models\\DTO\\VillaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T16:40:47.306Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApiRequest.cs",
-              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Models\\ApiRequest.cs",
-              "RelativeDocumentMoniker": "MagicVillaWeb\\Models\\ApiRequest.cs",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Models\\ApiRequest.cs",
-              "RelativeToolTip": "MagicVillaWeb\\Models\\ApiRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T16:36:52.218Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SD.cs",
-              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaUtility\\SD.cs",
-              "RelativeDocumentMoniker": "MagicVillaUtility\\SD.cs",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaUtility\\SD.cs",
-              "RelativeToolTip": "MagicVillaUtility\\SD.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "IBaseServices.cs",
+              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Services\\Interfaces\\IBaseServices.cs",
+              "RelativeDocumentMoniker": "MagicVillaWeb\\Services\\Interfaces\\IBaseServices.cs",
+              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Services\\Interfaces\\IBaseServices.cs",
+              "RelativeToolTip": "MagicVillaWeb\\Services\\Interfaces\\IBaseServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T16:33:16.021Z",
+              "WhenOpened": "2025-08-26T22:21:11.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Services\\BaseService.cs",
+              "RelativeDocumentMoniker": "MagicVillaWeb\\Services\\BaseService.cs",
+              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Services\\BaseService.cs",
+              "RelativeToolTip": "MagicVillaWeb\\Services\\BaseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-26T21:00:44.697Z",
               "EditorCaption": ""
             }
           ]

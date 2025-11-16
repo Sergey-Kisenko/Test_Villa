@@ -1,0 +1,12 @@
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\bin\Debug\net8.0\MagicVillaUtility.deps.json
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\bin\Debug\net8.0\MagicVillaUtility.dll
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\bin\Debug\net8.0\MagicVillaUtility.pdb
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\obj\Debug\net8.0\MagicVillaUtility.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\obj\Debug\net8.0\MagicVillaUtility.AssemblyInfoInputs.cache
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\obj\Debug\net8.0\MagicVillaUtility.AssemblyInfo.cs
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\obj\Debug\net8.0\MagicVillaUtility.csproj.CoreCompileInputs.cache
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\obj\Debug\net8.0\MagicVillaUtility.sourcelink.json
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\obj\Debug\net8.0\MagicVillaUtility.dll
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\obj\Debug\net8.0\refint\MagicVillaUtility.dll
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\obj\Debug\net8.0\MagicVillaUtility.pdb
+E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaUtility\obj\Debug\net8.0\ref\MagicVillaUtility.dll
