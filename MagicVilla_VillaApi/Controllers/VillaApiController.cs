@@ -26,7 +26,6 @@ namespace MagicVilla_VillaApi.Controllers
             _response = new ApiResponse();
         }
 
-
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<ApiResponse>> GetVillas()

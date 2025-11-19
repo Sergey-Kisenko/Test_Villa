@@ -16,7 +16,7 @@ namespace MagicVillaWeb.Model.DTO
         public int Sqft { get; set; }
         [Required]
         public int Occupancy { get; set; }
-        public string ImageUrl { get; set; }
-        public string Amenity { get; set; }
+        public string? ImageUrl { get; set; }
+        public string? Amenity { get; set; }
     }
 }

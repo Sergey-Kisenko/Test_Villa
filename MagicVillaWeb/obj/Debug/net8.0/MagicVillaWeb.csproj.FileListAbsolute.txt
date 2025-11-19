@@ -31,10 +31,6 @@ E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\obj\Debug\net8.0\M
 E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\obj\Debug\net8.0\ref\MagicVillaWeb.dll
 E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\bin\Debug\net8.0\AutoMapper.dll
 E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
-E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
-E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
-E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
-E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\bin\Debug\net8.0\Newtonsoft.Json.dll
 E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\bin\Debug\net8.0\MagicVillaUtility.dll
 E:\C# Project\2025\Udemi\Api_Course1\MagicVilla\MagicVillaWeb\bin\Debug\net8.0\MagicVillaUtility.pdb

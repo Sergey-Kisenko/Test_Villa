@@ -35,7 +35,6 @@ namespace MagicVillaWeb.Services
             });
         }
 
-
         public Task<T> GetAllAsync<T>()
         {
             return SendAsync<T>(new ApiRequest()
@@ -44,7 +43,6 @@ namespace MagicVillaWeb.Services
                 URL = villaUrl + "/api/VillaApi"
             });
         }
-
 
         public Task<T> GetAsync<T>(int id)
         {
