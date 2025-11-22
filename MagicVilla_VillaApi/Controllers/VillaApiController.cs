@@ -157,7 +157,7 @@ namespace MagicVilla_VillaApi.Controllers
             }
         }
 
-        [HttpPut]
+        [HttpPut("{id:int}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<ApiResponse>> PutVilla(int id, [FromBody] VillaDTOUpdate villa)

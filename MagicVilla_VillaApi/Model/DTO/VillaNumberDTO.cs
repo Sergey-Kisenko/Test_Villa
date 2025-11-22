@@ -2,7 +2,7 @@
 {
     public class VillaNumberDTO
     {
-        public int VillaNo { get; set; }
+        public int Id { get; set; }
         public string SpecialDetails { get; set; }
         public int VillaId { get; set; }
         public DateTime DateTimeCreate { get; set; }

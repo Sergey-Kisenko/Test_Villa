@@ -67,44 +67,6 @@
   },
   {
     "ContainingType": "MagicVilla_VillaApi.Controllers.VillaApiController",
-    "Method": "PutVilla",
-    "RelativePath": "api/VillaApi",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "villa",
-        "Type": "MagicVilla_VillaApi.Model.DTO.VillaDTOUpdate",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Void",
-        "MediaTypes": [],
-        "StatusCode": 204
-      },
-      {
-        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "StatusCode": 400
-      }
-    ]
-  },
-  {
-    "ContainingType": "MagicVilla_VillaApi.Controllers.VillaApiController",
     "Method": "GetVillas",
     "RelativePath": "api/VillaApi/{id}",
     "HttpMethod": "GET",
@@ -189,6 +151,44 @@
         "Type": "System.Void",
         "MediaTypes": [],
         "StatusCode": 500
+      }
+    ]
+  },
+  {
+    "ContainingType": "MagicVilla_VillaApi.Controllers.VillaApiController",
+    "Method": "PutVilla",
+    "RelativePath": "api/VillaApi/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "villa",
+        "Type": "MagicVilla_VillaApi.Model.DTO.VillaDTOUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 204
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 400
       }
     ]
   },

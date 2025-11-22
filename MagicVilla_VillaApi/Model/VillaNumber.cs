@@ -6,7 +6,7 @@ namespace MagicVilla_VillaApi.Model
     public class VillaNumber
     {
         [Key,DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int VillaNo { get; set; }
+        public int Id { get; set; }
         public string SpecialDetails { get; set; }
         public DateTime DateTimeCreate { get; set; }
         public DateTime DateTimeUpdate { get; set; }

@@ -55,7 +55,7 @@ namespace MagicVilla_VillaApi.Controllers
                     _response.ErrorMessege = new List<string> { "VillaNo is 0" };
                     return BadRequest(_response);
                 }
-                VillaNumber villaNumbers = await _context.Get(x=>x.VillaNo == VillaNo);
+                VillaNumber villaNumbers = await _context.Get(x=>x.Id == VillaNo);
                 if (villaNumbers == null)
                 {
                     _response.ErrorMessege = new List<string> { "Villa number is null" };
@@ -90,7 +90,7 @@ namespace MagicVilla_VillaApi.Controllers
                 _response.Result = numberDTOCreate;
                 _response.HttpStatusCode = HttpStatusCode.OK;
 
-                return CreatedAtRoute("GetNumberVilla", new { numberDTOCreate.VillaNo }, _response);
+                return CreatedAtRoute("GetNumberVilla", new { numberDTOCreate.Id }, _response);
 
             }
             catch (Exception ex)
@@ -146,7 +146,7 @@ namespace MagicVilla_VillaApi.Controllers
                     _response.HttpStatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(_response);
                 }
-                var obj = await _context.Get(x => x.VillaNo == id);
+                var obj = await _context.Get(x => x.Id == id);
                 if (obj == null)
                 {
                     _response.ErrorMessege = new List<string> { "id == 0" };
