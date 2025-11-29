@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "e+ioGpsGJmDqWqXyRl9gwJpIEDsqu4mzjdSODtPuLhw=",
+  "Hash": "jT4tiEobRvbguW0vEdgWTjONC0uXilvvaBKENTj6w6U=",
   "Source": "MagicVillaWeb",
   "BasePath": "_content/MagicVillaWeb",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MagicVillaWeb.bundle.scp.css"
+    },
+    {
+      "Identity": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\css\\bootstrap.css",
+      "SourceId": "MagicVillaWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\",
+      "BasePath": "_content/MagicVillaWeb",
+      "RelativePath": "css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.css"
     },
     {
       "Identity": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\css\\site.css",

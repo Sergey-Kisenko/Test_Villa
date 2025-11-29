@@ -31,7 +31,7 @@ namespace MagicVilla_VillaApi.Data
             modelBuilder.Entity<VillaNumber>().HasData(
                 new VillaNumber
                 {
-                    Id = 10,
+                    VillaNo = 10,
                     SpecialDetails = "Villa 1",
                     DateTimeCreate = new DateTime(2025, 1, 1),
                     VillaId = 1

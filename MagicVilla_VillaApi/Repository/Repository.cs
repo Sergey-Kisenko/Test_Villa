@@ -13,7 +13,48 @@ namespace MagicVilla_VillaApi.Repository
         public Repository(ApplicationDBContext context)
         {
             _context = context;
+            _context.VillaNumbers.Include(u => u.Villa).ToList();
             _dbSet = context.Set<T>();
+        }
+        public async Task<T?> Get(Expression<Func<T, bool>> filter = null, bool tracked = false, string? includeProperties = null)
+        {
+            IQueryable<T> query = _dbSet;
+
+            if (!tracked)
+            {
+                query = query.AsNoTracking();
+            }
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+            if(includeProperties!= null)
+            {
+                foreach (var incliderProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(incliderProp);
+                }
+            }
+
+            return await query.FirstOrDefaultAsync();
+        }
+
+        public async Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>> filter = null, string? includeProperties = null)
+        {
+            IQueryable<T> query = _dbSet;
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+            if (includeProperties != null)
+            {
+                foreach (var incliderProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(incliderProp);
+                }
+            }
+
+            return await query.ToListAsync();
         }
         public async Task<T> Create(T entity)
         {
@@ -27,33 +68,6 @@ namespace MagicVilla_VillaApi.Repository
             _dbSet.Remove(entity);
             await Save();
             return Task.CompletedTask;
-        }
-
-        public async Task<T?> Get(Expression<Func<T, bool>> filter = null, bool tracked = false)
-        {
-            IQueryable<T> query = _dbSet;
-
-            if (!tracked)
-            {
-                query = query.AsNoTracking();
-            }
-            if(filter!= null)
-            {
-                query = query.Where(filter);
-            }
-
-            return await query.FirstOrDefaultAsync();
-        }
-
-        public async Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>> filter = null)
-        {
-            IQueryable<T> query = _dbSet;
-            if (filter != null)
-            {
-                query = query.Where(filter);
-            }
-
-            return await query.ToListAsync();
         }
 
         public async Task Save()
