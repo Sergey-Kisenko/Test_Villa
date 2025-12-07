@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MagicVillaWeb.bundle.scp.css"
     },
     {
+      "Id": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\css\\bootstrap (1).css",
+      "PackagePath": "staticwebassets\\css\\bootstrap (1).css"
+    },
+    {
       "Id": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
@@ -15,6 +19,26 @@
     {
       "Id": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\img\\Villa1.jpg",
+      "PackagePath": "staticwebassets\\img\\Villa1.jpg"
+    },
+    {
+      "Id": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\img\\Villa2.jpg",
+      "PackagePath": "staticwebassets\\img\\Villa2.jpg"
+    },
+    {
+      "Id": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\img\\Villa3.jpg",
+      "PackagePath": "staticwebassets\\img\\Villa3.jpg"
+    },
+    {
+      "Id": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\img\\Villa4.jpg",
+      "PackagePath": "staticwebassets\\img\\Villa4.jpg"
+    },
+    {
+      "Id": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\img\\Villa5.jpg",
+      "PackagePath": "staticwebassets\\img\\Villa5.jpg"
     },
     {
       "Id": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\wwwroot\\js\\site.js",
