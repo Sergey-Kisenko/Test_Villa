@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.JsonPatch;
 using AutoMapper;
 using MagicVilla_VillaApi.Repository.Interfaces;
 using System.Net;
+using MagicVilla_VillaApi.Service.Interfaces;
 
 namespace MagicVilla_VillaApi.Controllers
 {
@@ -16,13 +17,15 @@ namespace MagicVilla_VillaApi.Controllers
         private readonly ILogger<VillaApiController> _logger;
         readonly IMapper _mapper;
         private readonly IVillaRepository _repository;
+        private readonly IVillaServices _villaServices;
         protected ApiResponse _response;
 
-        public VillaApiController(ILogger<VillaApiController> logger, ApplicationDBContext context, IMapper mapper, IVillaRepository repository)
+        public VillaApiController(ILogger<VillaApiController> logger, ApplicationDBContext context, IMapper mapper, IVillaRepository repository, IVillaServices villaServices)
         {
             _mapper = mapper;
             _logger = logger;
             _repository = repository;
+            _villaServices = villaServices;
             _response = new ApiResponse();
         }
 
@@ -171,7 +174,7 @@ namespace MagicVilla_VillaApi.Controllers
                     return BadRequest(_response);
                 }
 
-                await _repository.Update(_mapper.Map<Villa>(villa));
+                await _villaServices.Update(villa);
                 _response.HttpStatusCode = HttpStatusCode.OK;
                 return Ok(_response);
             }

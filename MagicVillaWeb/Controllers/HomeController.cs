@@ -33,7 +33,10 @@ namespace MagicVillaWeb.Controllers
 
             return View(villas);
         }
-
+        public async Task<IActionResult> Book()
+        {
+            return View();
+        }
       
 
     }

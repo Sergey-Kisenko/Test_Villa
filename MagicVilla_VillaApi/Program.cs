@@ -2,6 +2,8 @@ using MagicVilla_VillaApi;
 using MagicVilla_VillaApi.Data;
 using MagicVilla_VillaApi.Repository;
 using MagicVilla_VillaApi.Repository.Interfaces;
+using MagicVilla_VillaApi.Service;
+using MagicVilla_VillaApi.Service.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +19,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
 builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
+builder.Services.AddScoped<IVillaServices, VillaService>();
 //builder.Services.AddSingleton<IMyLogs, MyLogs>(); пример подключения зависимостей
 
 var app = builder.Build();

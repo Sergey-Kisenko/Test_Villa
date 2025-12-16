@@ -18,7 +18,6 @@ namespace MagicVillaWeb.Controllers
             _villaService = villaService;
             _mapper = mapper;
         }
-
         public async Task<IActionResult> IndexVilla()
         {
             List<VillaDTO> list = new();
@@ -29,13 +28,11 @@ namespace MagicVillaWeb.Controllers
             }
             return View(list);
         }
-
         [HttpGet]
         public async Task<IActionResult> CreateVilla()
         {
             return View();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> CreateVilla(VillaDTOCreate model)
@@ -50,7 +47,6 @@ namespace MagicVillaWeb.Controllers
             }
             return View(model);
         }
-
         [HttpGet]
         public async Task<IActionResult> UpdateVilla(int villaId)
         {
@@ -62,7 +58,6 @@ namespace MagicVillaWeb.Controllers
             }
             return NotFound();
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdateVilla(VillaDTOUpdate model)
@@ -77,7 +72,6 @@ namespace MagicVillaWeb.Controllers
             }
             return View(model);
         }
-
         public async Task<IActionResult> DeleteVilla(int villaId)
         {
             var response = await _villaService.GetAsync<ApiResponse>(villaId);
@@ -98,6 +92,5 @@ namespace MagicVillaWeb.Controllers
             }
             return NotFound();
         }
-
     }
 }

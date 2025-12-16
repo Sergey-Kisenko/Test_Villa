@@ -1,4 +1,5 @@
 ﻿using MagicVilla_VillaApi.Model;
+using MagicVilla_VillaApi.Model.DTO;
 
 namespace MagicVilla_VillaApi.Repository.Interfaces
 {
