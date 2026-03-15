@@ -19,7 +19,7 @@ namespace MagicVilla_VillaApi.Service
 
         public async Task Update(VillaDTOUpdate dto)
         {
-            var villa = await _villaRepository.Get(x=>dto.Id == x.Id);
+            var villa = await _villaRepository.Get(x=>dto.Id == x.Id,true);
             if (villa == null)
                 throw new Exception("Villa not found");
 

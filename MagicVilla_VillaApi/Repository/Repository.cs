@@ -16,6 +16,7 @@ namespace MagicVilla_VillaApi.Repository
             _context.VillaNumbers.Include(u => u.Villa).ToList();
             _dbSet = context.Set<T>();
         }
+        
         public async Task<T?> Get(Expression<Func<T, bool>> filter = null, bool tracked = false, string? includeProperties = null)
         {
             IQueryable<T> query = _dbSet;
@@ -56,6 +57,7 @@ namespace MagicVilla_VillaApi.Repository
 
             return await query.ToListAsync();
         }
+       
         public async Task<T> Create(T entity)
         {
             await _dbSet.AddAsync(entity);
@@ -63,11 +65,10 @@ namespace MagicVilla_VillaApi.Repository
             return entity;
         }
 
-        public async Task<Task> Delete(T entity)
+        public async Task Delete(T entity)
         {
             _dbSet.Remove(entity);
             await Save();
-            return Task.CompletedTask;
         }
 
         public async Task Save()

@@ -17,9 +17,13 @@ builder.Services.AddControllers(option => option.ReturnHttpNotAcceptable = false
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
 builder.Services.AddScoped<IVillaRepository, VillaRepository>();
 builder.Services.AddScoped<IVillaNumberRepository, VillaNumberRepository>();
+
 builder.Services.AddScoped<IVillaServices, VillaService>();
+builder.Services.AddScoped<IVillaNumberService, VillaNumberService>();
+
 //builder.Services.AddSingleton<IMyLogs, MyLogs>(); пример подключения зависимостей
 
 var app = builder.Build();

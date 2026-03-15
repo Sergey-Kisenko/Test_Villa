@@ -148,7 +148,6 @@ namespace MagicVilla_VillaApi.Controllers
                 await _repository.Delete(obj);
                 _response.HttpStatusCode = HttpStatusCode.OK;
                 
-
                 return Ok(_response);
             }
             catch (Exception ex)
