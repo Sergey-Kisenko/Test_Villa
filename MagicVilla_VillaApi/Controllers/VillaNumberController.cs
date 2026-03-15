@@ -6,7 +6,6 @@ using MagicVilla_VillaApi.Repository.Interfaces;
 using MagicVilla_VillaApi.Service.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
-using System.Security.Cryptography;
 
 namespace MagicVilla_VillaApi.Controllers
 {
@@ -17,14 +16,16 @@ namespace MagicVilla_VillaApi.Controllers
         readonly IMapper _mapper;
         private readonly IVillaNumberRepository _repository;
         private readonly IVillaNumberService _villaNmberServices;
+        private readonly IVillaRepository _villaRepository;
 
         private ApiResponse _response;
 
-        public VillaNumberController(IMapper _mapper, IVillaNumberRepository _context, IVillaNumberService _villaNmberServices)
+        public VillaNumberController(IMapper _mapper, IVillaNumberRepository _context, IVillaNumberService _villaNmberServices, IVillaRepository _villaRepository)
         {
             this._mapper = _mapper;
             this._repository = _context;
             this._villaNmberServices = _villaNmberServices;
+            this._villaRepository = _villaRepository;
 
             _response = new ApiResponse();
         }
@@ -91,30 +92,27 @@ namespace MagicVilla_VillaApi.Controllers
                     _response.HttpStatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(_response);
                 }
-
-                if (await _repository.Get(u => u.VillaNo == numberDTOCreate.VillaNo) != null)
+                if (await _repository.Get(u => u.VillaNo == numberDTOCreate.VillaNo && numberDTOCreate.VillaId == u.VillaId) != null)
                 {
                     ModelState.AddModelError("ErrorMessege", "Villa number already Exsist");
                     _response.isSuccess = false;
                     _response.HttpStatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(ModelState);
                 }
-                if (await _repository.Get(u => u.VillaId == numberDTOCreate.VillaId) != null)
+                if (await _villaRepository.Get(u => u.Id == numberDTOCreate.VillaId) == null)
                 {
-
-                    ModelState.AddModelError("ErrorMessege", "Villa id is not invalid");
+                    ModelState.AddModelError("ErrorMessege", "Villa id is not invalid");       
                     _response.isSuccess = false;
                     _response.HttpStatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(ModelState);
-                }
-                
+                }                
                 VillaNumber villaNum = _mapper.Map<VillaNumber>(numberDTOCreate);
                 await _repository.Create(villaNum);
                 _response.Result = numberDTOCreate;
                 _response.HttpStatusCode = HttpStatusCode.OK;
+                _response.ErrorMessege = new();
 
                 return CreatedAtRoute("GetNumberVilla", new { numberDTOCreate.VillaNo }, _response);
-
             }
             catch (Exception ex)
             {
@@ -136,12 +134,9 @@ namespace MagicVilla_VillaApi.Controllers
                     _response.HttpStatusCode = HttpStatusCode.BadRequest;
                     return BadRequest(_response);
                 }
-
                 await _villaNmberServices.Update(dTOUpdate);
-
                 _response.Result = dTOUpdate;
                 _response.HttpStatusCode = HttpStatusCode.OK;
-
                 return Ok(_response);
             }
             catch (Exception ex)
@@ -159,7 +154,6 @@ namespace MagicVilla_VillaApi.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<ApiResponse>> DeleteVilla(int VillaNo) // не пашет 
         {
-
             try
             {
                 if (VillaNo == 0)
@@ -179,7 +173,6 @@ namespace MagicVilla_VillaApi.Controllers
                 }         
                 await _repository.Delete(obj);
                 _response.HttpStatusCode = HttpStatusCode.OK;
-
                 return Ok(_response);
             }
             catch (Exception ex)

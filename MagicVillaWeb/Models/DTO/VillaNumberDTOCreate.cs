@@ -7,6 +7,6 @@
         public DateTime DateTimeCreate { get; set; }
         public int VillaId { get; set; }
 
-        public List<VillaDTO> Villas { get; set; }
+        public List<VillaDTO>? Villas { get; set; }
     }
 }

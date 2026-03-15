@@ -53,7 +53,7 @@ namespace MagicVillaWeb.Controllers
             if (ModelState.IsValid) {
                 var response = await _serviceVillaNumber.CreateAsync<ApiResponse>(numberDTOCreate);
 
-                if (response != null && response.isSuccess)
+                if (response != null && response.isSuccess && response.ErrorMessege.Count == 0 && response.ErrorMessege!= null)
                 {
                     return RedirectToAction(nameof(IndexVillaNumber));
                 }
@@ -63,9 +63,7 @@ namespace MagicVillaWeb.Controllers
                     {
                         ModelState.AddModelError("ErrorMessege", response.ErrorMessege.FirstOrDefault());
                     }
-
                 }
-
             }
             var resp = await _serviceVilla.GetAllAsync<ApiResponse>();
 
