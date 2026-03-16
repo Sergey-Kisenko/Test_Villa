@@ -152,7 +152,7 @@ namespace MagicVilla_VillaApi.Controllers
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        public async Task<ActionResult<ApiResponse>> DeleteVilla(int VillaNo) // не пашет 
+        public async Task<ActionResult<ApiResponse>> DeleteVilla(int VillaNo)
         {
             try
             {

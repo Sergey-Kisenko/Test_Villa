@@ -34,12 +34,11 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "dbo.Villas [Data]",
+              "Title": "dbo.Villas.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MagicVillaTestPr/True/SqlTable/dbo.Villas.sql",
-              "ToolTip": "dbo.Villas [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/MagicVillaTestPr/True/SqlTable/dbo.Villas.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2026-03-15T16:57:20.515Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-15T16:57:20.515Z"
             },
             {
               "$type": "Document",
@@ -47,12 +46,11 @@
               "Title": "BaseService.cs",
               "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Services\\BaseService.cs",
               "RelativeDocumentMoniker": "MagicVillaWeb\\Services\\BaseService.cs",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Services\\BaseService.cs*",
-              "RelativeToolTip": "MagicVillaWeb\\Services\\BaseService.cs*",
+              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Services\\BaseService.cs",
+              "RelativeToolTip": "MagicVillaWeb\\Services\\BaseService.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAkwCkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-22T02:57:20.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-22T02:57:20.683Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "MagicVilla_VillaApi\\Controllers\\VillaNumberController.cs",
               "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVilla_VillaApi\\Controllers\\VillaNumberController.cs*",
               "RelativeToolTip": "MagicVilla_VillaApi\\Controllers\\VillaNumberController.cs*",
-              "ViewState": "AgIAACQAAAAAAAAAAAAYwF8AAAB7AAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAkwLoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-07T03:10:02.596Z",
               "EditorCaption": ""
@@ -73,12 +71,11 @@
               "Title": "VillaNumberController.cs",
               "DocumentMoniker": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Controllers\\VillaNumberController.cs",
               "RelativeDocumentMoniker": "MagicVillaWeb\\Controllers\\VillaNumberController.cs",
-              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Controllers\\VillaNumberController.cs*",
-              "RelativeToolTip": "MagicVillaWeb\\Controllers\\VillaNumberController.cs*",
+              "ToolTip": "E:\\C# Project\\2025\\Udemi\\Api_Course1\\MagicVilla\\MagicVillaWeb\\Controllers\\VillaNumberController.cs",
+              "RelativeToolTip": "MagicVillaWeb\\Controllers\\VillaNumberController.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAkwEEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-07T03:09:10.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T03:09:10.3Z"
             }
           ]
         }
