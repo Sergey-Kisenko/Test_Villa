@@ -30,7 +30,7 @@ namespace MagicVilla_VillaApi.Repository
             return false;
         }
 
-        public LoginResponseDTO Login(LoginRequestDTO loginRequestDTO)
+        public async Task<LoginResponseDTO> Login(LoginRequestDTO loginRequestDTO)
         {
             var user = db.LocalUsers.FirstOrDefault(u => u.UserName.ToLower() == loginRequestDTO.UserName.ToLower() && u.Password == loginRequestDTO.Password);
 
@@ -44,7 +44,7 @@ namespace MagicVilla_VillaApi.Repository
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new System.Security.Claims.ClaimsIdentity(new Claim[]
+                Subject = new ClaimsIdentity(new Claim[]
                 {
                     new Claim(ClaimTypes.Name, user.Id.ToString()),
                     new Claim(ClaimTypes.Role, user.Role)
