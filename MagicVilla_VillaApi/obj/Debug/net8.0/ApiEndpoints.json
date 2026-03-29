@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "MagicVilla_VillaApi.Controllers.UsersController",
+    "Method": "Login",
+    "RelativePath": "api/UsersAuth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "MagicVilla_VillaApi.Model.DTO.LoginRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MagicVilla_VillaApi.Controllers.UsersController",
+    "Method": "Register",
+    "RelativePath": "api/UsersAuth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "MagicVilla_VillaApi.Model.DTO.RegisterationRequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MagicVilla_VillaApi.Controllers.VillaApiController",
     "Method": "GetVillas",
     "RelativePath": "api/VillaApi",

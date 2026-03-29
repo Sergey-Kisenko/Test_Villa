@@ -7,6 +7,7 @@ using AutoMapper;
 using MagicVilla_VillaApi.Repository.Interfaces;
 using System.Net;
 using MagicVilla_VillaApi.Service.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MagicVilla_VillaApi.Controllers
 {
@@ -52,6 +53,7 @@ namespace MagicVilla_VillaApi.Controllers
         }
 
         [HttpGet("{id:int}", Name = "GetVilla")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -88,6 +90,7 @@ namespace MagicVilla_VillaApi.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles ="admin")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -122,8 +125,11 @@ namespace MagicVilla_VillaApi.Controllers
         }
 
         [HttpDelete("{id:int}")]
+        [Authorize(Roles ="Custom")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<ApiResponse>> DeleteVilla(int id)
         {
