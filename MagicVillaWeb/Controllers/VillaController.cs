@@ -2,9 +2,9 @@
 using MagicVillaWeb.Model;
 using MagicVillaWeb.Model.DTO;
 using MagicVillaWeb.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 
 namespace MagicVillaWeb.Controllers
 {
@@ -28,13 +28,17 @@ namespace MagicVillaWeb.Controllers
             }
             return View(list);
         }
+
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> CreateVilla()
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> CreateVilla(VillaDTOCreate model)
         {
             if (ModelState.IsValid)
@@ -49,6 +53,7 @@ namespace MagicVillaWeb.Controllers
             return View(model);
         }
         [HttpGet]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> UpdateVilla(int villaId)
         {
             var response = await _villaService.GetAsync<ApiResponse>(villaId);
@@ -59,8 +64,10 @@ namespace MagicVillaWeb.Controllers
             }
             return NotFound();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> UpdateVilla(VillaDTOUpdate model)
         {
             if (ModelState.IsValid)
@@ -74,6 +81,9 @@ namespace MagicVillaWeb.Controllers
             }
             return View(model);
         }
+
+        [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteVilla(int villaId)
         {
             var response = await _villaService.GetAsync<ApiResponse>(villaId);
@@ -85,7 +95,9 @@ namespace MagicVillaWeb.Controllers
             }
             return NotFound();
         }
+
         [HttpPost]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> DeleteVilla(VillaDTO model)
         {
             var response = await _villaService.DeleteAsync<ApiResponse>(model.Id);

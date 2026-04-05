@@ -1,5 +1,4 @@
-﻿using Azure;
-using MagicVilla_VillaApi.Model;
+﻿using MagicVilla_VillaApi.Model;
 using MagicVilla_VillaApi.Model.DTO;
 using MagicVilla_VillaApi.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +19,7 @@ namespace MagicVilla_VillaApi.Controllers
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] LoginRequestDTO model)
+        public async Task<ActionResult<ApiResponse>> Login([FromBody] LoginRequestDTO model)
         {
             var loginRespose = await _userRepository.Login(model);
             if (loginRespose == null || string.IsNullOrEmpty(loginRespose.Token))
@@ -39,7 +38,7 @@ namespace MagicVilla_VillaApi.Controllers
         }
        
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromBody] RegisterationRequestDTO model)
+        public async Task<ActionResult<ApiResponse>> Register([FromBody] RegisterationRequestDTO model)
         {
             bool ifUserNameUnuque = _userRepository.IsUniqueUser(model.UserName);
             if(ifUserNameUnuque == false)
@@ -51,7 +50,7 @@ namespace MagicVilla_VillaApi.Controllers
             }
 
             var user = await _userRepository.Register(model);
-            if(user!= null)
+            if(user == null)
             {
                 _response.isSuccess = false;
                 _response.HttpStatusCode = System.Net.HttpStatusCode.BadRequest;

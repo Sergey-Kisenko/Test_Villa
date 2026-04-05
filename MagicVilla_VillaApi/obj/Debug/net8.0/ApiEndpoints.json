@@ -13,7 +13,19 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaApi.Model.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "MagicVilla_VillaApi.Controllers.UsersController",
@@ -29,7 +41,19 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "MagicVilla_VillaApi.Model.ApiResponse",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "StatusCode": 200
+      }
+    ]
   },
   {
     "ContainingType": "MagicVilla_VillaApi.Controllers.VillaApiController",
