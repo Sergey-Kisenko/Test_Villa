@@ -125,7 +125,7 @@ namespace MagicVilla_VillaApi.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        [Authorize(Roles ="Custom")]
+        [Authorize(Roles = "admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
@@ -166,6 +166,7 @@ namespace MagicVilla_VillaApi.Controllers
         }
 
         [HttpPut("{id:int}")]
+        [Authorize(Roles = "admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<ApiResponse>> PutVilla(int id, [FromBody] VillaDTOUpdate villa)
@@ -193,6 +194,7 @@ namespace MagicVilla_VillaApi.Controllers
         }
         
         [HttpPatch("{id:int}", Name ="UpdatePartialVilla")]
+        [Authorize(Roles = "admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<ApiResponse>> UpdatePartialVilla(int id, JsonPatchDocument<VillaDTO> patchDto)

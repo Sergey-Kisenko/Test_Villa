@@ -19,23 +19,17 @@ builder.Services.AddHttpClient<IAuthService, AuthService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 
 builder.Services.AddDistributedMemoryCache();
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).
-    AddCookie(option => {
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(option => {
         option.Cookie.HttpOnly = true;
         option.ExpireTimeSpan = TimeSpan.FromMinutes(30);
         option.LoginPath = "/Auth/Login";
         option.AccessDeniedPath = "/Auth/AccessDenied";
         option.SlidingExpiration = true;
     });
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("admin", policy => policy.RequireRole("admin"));
-});
-
-
 
 builder.Services.AddSession(option => {
-    option.IdleTimeout = TimeSpan.FromMinutes(10);
+    option.IdleTimeout = TimeSpan.FromMinutes(100);
     option.Cookie.HttpOnly = true;
     option.Cookie.IsEssential = true;
 });
